@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Ad Blocker",
+  "version": "1.0",
+  "description": "Blocks simple ad URLs using declarativeNetRequest.",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
